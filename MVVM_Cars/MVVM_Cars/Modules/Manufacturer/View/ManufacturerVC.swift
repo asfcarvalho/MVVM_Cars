@@ -15,6 +15,7 @@ class ManufacturerVC: UIViewController {
     
     let cellName = "cell"
     var manufacturerViewModel: ManufacturerViewModel?
+    let manufacturerWireFrame = ManufacturerWireFrame()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,16 +24,31 @@ class ManufacturerVC: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
+        self.searchBar.delegate = self
+        
         fetchData()
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.title = "Manufacturer"
+    }
+    
     fileprivate func fetchData() {
+        
+        Loading.shared.showLoading(self.view)
+        
         let page = manufacturerViewModel?.page ?? 0
         ManufacturerDataModule.shared.manufacturerFetch(page) { [weak self] (result, error) in
             
             guard let result = result, error == nil else {
-                print(error)
+                
+                self?.stopLoading()
+                
+                UIAlertCustom.shared.showAlert(from: self, message: error, prefferedStyle: UIAlertController.Style.alert)
+                
                 return
             }
             
@@ -43,11 +59,21 @@ class ManufacturerVC: UIViewController {
             }
             
             DispatchQueue.main.async {
-                self?.tableView.reloadData()
+                self?.tableView.reloadData()                
             }
+            self?.stopLoading()
+            
             
         }
         
+    }
+    
+    private func stopLoading() {
+        Loading.shared.stopLoading()
+    }
+    
+    @objc private func hideKeyboard() {
+        self.view.endEditing(true)
     }
     
 }
@@ -72,9 +98,25 @@ extension ManufacturerVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.hideKeyboard()
         self.tableView.deselectRow(at: indexPath, animated: false)
-        print(manufacturerViewModel?.manufacturList[indexPath.row].name)
+        manufacturerViewModel?.setOutput(indexPath.row)
+        manufacturerWireFrame.showModel(from: self, manufacturer: manufacturerViewModel)
     }
     
     
+}
+
+extension ManufacturerVC: UISearchBarDelegate {
+    public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        manufacturerViewModel?.searchValue(searchText)
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+        
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        hideKeyboard()
+    }
 }

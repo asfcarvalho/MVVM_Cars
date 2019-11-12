@@ -17,7 +17,7 @@ class ManufacturerDataModule {
     func manufacturerFetch(_ page: Int, callBack: @escaping (Manufacturer?, String?) -> Void) {
         
         let apiRequest = APIRequest()
-        apiRequest.baseURL = URL(string: "http://api-aws-eu-qa-1.auto1-test.com/v1/car-types/manufacturer?page=\(page)&pageSize=\(pageSize)&wa_key=coding-puzzle-client-449cc9d")
+        apiRequest.baseURL = URL(string: "\(URLDdefault)manufacturer?page=\(page)&pageSize=\(pageSize)&wa_key=\(keyDefault)")
         
         APICalling().fetch(apiRequest: apiRequest) { (result: Manufacturer?, error) in
             callBack(result, error)

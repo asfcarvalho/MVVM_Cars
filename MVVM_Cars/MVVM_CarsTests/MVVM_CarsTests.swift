@@ -19,16 +19,48 @@ class MVVM_CarsTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    //MARK: testing manufacturerViewModel
+    func testManufacturerViewModelSearchOutput() {
+        let manufacturer = Manufacturer(page: 0, pageSize: 10, totalPageCount: 10, wkda: ["107": "Bentley"])
+        let manufacturerViewModel = ManufacturerViewModel(manufacturer)
+        
+        manufacturerViewModel.searchValue("Ben")
+        
+        XCTAssertTrue(manufacturerViewModel.getNumberOfRows() > 0)
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    //Testing the tableview text
+    func testManufacturerViewModel() {
+        let manufacturer = Manufacturer(page: 0, pageSize: 10, totalPageCount: 10, wkda: ["107": "Bentley"])
+        let manufacturerViewModel = ManufacturerViewModel(manufacturer)
+        
+        XCTAssertTrue(manufacturerViewModel.getNumberOfRows() > 0)
+    }
+    
+    //MARK: testing modelViewModel
+    
+    //Testing the output message
+    func testModelViewModelMessage() {
+        let input = ModelViewModel.Input(code: "107", name: "Bentley")
+        let model = Model(page: 0, pageSize: 10, totalPageCount: 1, wkda: ["Arnage": "Arnage"])
+        let modelViewModel = ModelViewModel(model)
+        modelViewModel.manufacturer = input
+        
+        let message = modelViewModel.getMessage(0)
+        
+        let modelOut = modelViewModel.modelList[0]
+        
+        XCTAssertEqual(message, "(\(modelViewModel.manufacturer?.name ?? ""), \(modelOut.name))")
+    }
+    
+    //Testing the tableview text
+    func testModelViewModel() {
+        let input = ModelViewModel.Input(code: "107", name: "Bentley")
+        let model = Model(page: 0, pageSize: 10, totalPageCount: 1, wkda: ["Arnage": "Arnage"])
+        let modelViewModel = ModelViewModel(model)
+        modelViewModel.manufacturer = input
+        
+        XCTAssertTrue(modelViewModel.getNumberOfRows() > 0)
     }
 
 }

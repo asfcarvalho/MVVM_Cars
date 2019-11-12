@@ -7,8 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		191F3994237AE01C00C610CF /* ModelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191F3993237AE01C00C610CF /* ModelVC.swift */; };
+		191F3997237AE0D600C610CF /* ModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191F3995237AE0D600C610CF /* ModelCell.swift */; };
+		191F3998237AE0D600C610CF /* ModelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 191F3996237AE0D600C610CF /* ModelCell.xib */; };
+		191F399A237AE1BA00C610CF /* ModelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191F3999237AE1BA00C610CF /* ModelViewModel.swift */; };
+		191F399C237AE1F000C610CF /* ModelDataModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191F399B237AE1F000C610CF /* ModelDataModule.swift */; };
+		191F399F237AE22200C610CF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191F399E237AE22200C610CF /* Model.swift */; };
+		191F39A1237AE37100C610CF /* APIStringsDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191F39A0237AE37100C610CF /* APIStringsDefault.swift */; };
+		191F39A4237AE72500C610CF /* UIalert+custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191F39A3237AE72500C610CF /* UIalert+custom.swift */; };
+		191F39A7237AEE0500C610CF /* ManufacturerWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191F39A6237AEE0500C610CF /* ManufacturerWireFrame.swift */; };
+		191F39A9237B007E00C610CF /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191F39A8237B007E00C610CF /* Loading.swift */; };
 		19D037792379E01000D0D0B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D037782379E01000D0D0B2 /* AppDelegate.swift */; };
-		19D0377B2379E01000D0D0B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D0377A2379E01000D0D0B2 /* ViewController.swift */; };
 		19D0377E2379E01000D0D0B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19D0377C2379E01000D0D0B2 /* Main.storyboard */; };
 		19D037802379E01200D0D0B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19D0377F2379E01200D0D0B2 /* Assets.xcassets */; };
 		19D037832379E01200D0D0B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19D037812379E01200D0D0B2 /* LaunchScreen.storyboard */; };
@@ -42,9 +51,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		191F3993237AE01C00C610CF /* ModelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelVC.swift; sourceTree = "<group>"; };
+		191F3995237AE0D600C610CF /* ModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCell.swift; sourceTree = "<group>"; };
+		191F3996237AE0D600C610CF /* ModelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModelCell.xib; sourceTree = "<group>"; };
+		191F3999237AE1BA00C610CF /* ModelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelViewModel.swift; sourceTree = "<group>"; };
+		191F399B237AE1F000C610CF /* ModelDataModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDataModule.swift; sourceTree = "<group>"; };
+		191F399E237AE22200C610CF /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		191F39A0237AE37100C610CF /* APIStringsDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIStringsDefault.swift; sourceTree = "<group>"; };
+		191F39A3237AE72500C610CF /* UIalert+custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIalert+custom.swift"; sourceTree = "<group>"; };
+		191F39A6237AEE0500C610CF /* ManufacturerWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufacturerWireFrame.swift; sourceTree = "<group>"; };
+		191F39A8237B007E00C610CF /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
 		19D037752379E01000D0D0B2 /* MVVM_Cars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM_Cars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19D037782379E01000D0D0B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		19D0377A2379E01000D0D0B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		19D0377D2379E01000D0D0B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		19D0377F2379E01200D0D0B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19D037822379E01200D0D0B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -90,6 +108,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		191F398E237ADFB700C610CF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				191F3991237ADFE100C610CF /* ViewModel */,
+				191F3990237ADFD900C610CF /* DataModule */,
+				191F398F237ADFCC00C610CF /* View */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		191F398F237ADFCC00C610CF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				191F3992237ADFEE00C610CF /* Cell */,
+				191F3993237AE01C00C610CF /* ModelVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		191F3990237ADFD900C610CF /* DataModule */ = {
+			isa = PBXGroup;
+			children = (
+				191F399B237AE1F000C610CF /* ModelDataModule.swift */,
+			);
+			path = DataModule;
+			sourceTree = "<group>";
+		};
+		191F3991237ADFE100C610CF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				191F3999237AE1BA00C610CF /* ModelViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		191F3992237ADFEE00C610CF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				191F3995237AE0D600C610CF /* ModelCell.swift */,
+				191F3996237AE0D600C610CF /* ModelCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		191F39A2237AE71200C610CF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				191F39A3237AE72500C610CF /* UIalert+custom.swift */,
+				191F39A8237B007E00C610CF /* Loading.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		191F39A5237AEDF300C610CF /* WireFrame */ = {
+			isa = PBXGroup;
+			children = (
+				191F39A6237AEE0500C610CF /* ManufacturerWireFrame.swift */,
+			);
+			path = WireFrame;
+			sourceTree = "<group>";
+		};
 		19D0376C2379E01000D0D0B2 = {
 			isa = PBXGroup;
 			children = (
@@ -113,13 +192,11 @@
 		19D037772379E01000D0D0B2 /* MVVM_Cars */ = {
 			isa = PBXGroup;
 			children = (
+				191F39A2237AE71200C610CF /* Utils */,
 				19D037B92379E1D200D0D0B2 /* BaseDataModule */,
 				19D037A82379E05D00D0D0B2 /* Modules */,
 				19D037A72379E05200D0D0B2 /* Models */,
 				19D037A62379E01E00D0D0B2 /* Resources */,
-				19D037782379E01000D0D0B2 /* AppDelegate.swift */,
-				19D0377A2379E01000D0D0B2 /* ViewController.swift */,
-				19D0377C2379E01000D0D0B2 /* Main.storyboard */,
 			);
 			path = MVVM_Cars;
 			sourceTree = "<group>";
@@ -145,8 +222,10 @@
 		19D037A62379E01E00D0D0B2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				19D037782379E01000D0D0B2 /* AppDelegate.swift */,
 				19D0377F2379E01200D0D0B2 /* Assets.xcassets */,
 				19D037812379E01200D0D0B2 /* LaunchScreen.storyboard */,
+				19D0377C2379E01000D0D0B2 /* Main.storyboard */,
 				19D037842379E01200D0D0B2 /* Info.plist */,
 			);
 			path = Resources;
@@ -163,6 +242,7 @@
 		19D037A82379E05D00D0D0B2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				191F398E237ADFB700C610CF /* Model */,
 				19D037A92379E06400D0D0B2 /* Manufacturer */,
 			);
 			path = Modules;
@@ -171,6 +251,7 @@
 		19D037A92379E06400D0D0B2 /* Manufacturer */ = {
 			isa = PBXGroup;
 			children = (
+				191F39A5237AEDF300C610CF /* WireFrame */,
 				19D037AC2379E08E00D0D0B2 /* ViewModel */,
 				19D037AB2379E08600D0D0B2 /* DataModule */,
 				19D037AA2379E08000D0D0B2 /* View */,
@@ -217,6 +298,7 @@
 			children = (
 				19D037BA2379E1F800D0D0B2 /* APIRequest.swift */,
 				19D037BC2379E20C00D0D0B2 /* APICalling.swift */,
+				191F39A0237AE37100C610CF /* APIStringsDefault.swift */,
 			);
 			path = BaseDataModule;
 			sourceTree = "<group>";
@@ -225,6 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				19D037BF2379E33400D0D0B2 /* Manufacturer.swift */,
+				191F399E237AE22200C610CF /* Model.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -334,6 +417,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19D037832379E01200D0D0B2 /* LaunchScreen.storyboard in Resources */,
+				191F3998237AE0D600C610CF /* ModelCell.xib in Resources */,
 				19D037802379E01200D0D0B2 /* Assets.xcassets in Resources */,
 				19D037B42379E0EC00D0D0B2 /* ManufacturerCell.xib in Resources */,
 				19D0377E2379E01000D0D0B2 /* Main.storyboard in Resources */,
@@ -361,13 +445,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				191F3994237AE01C00C610CF /* ModelVC.swift in Sources */,
+				191F39A9237B007E00C610CF /* Loading.swift in Sources */,
+				191F39A1237AE37100C610CF /* APIStringsDefault.swift in Sources */,
 				19D037B82379E1B600D0D0B2 /* ManufacturerDataModule.swift in Sources */,
 				19D037BB2379E1F800D0D0B2 /* APIRequest.swift in Sources */,
-				19D0377B2379E01000D0D0B2 /* ViewController.swift in Sources */,
+				191F3997237AE0D600C610CF /* ModelCell.swift in Sources */,
+				191F39A7237AEE0500C610CF /* ManufacturerWireFrame.swift in Sources */,
 				19D037792379E01000D0D0B2 /* AppDelegate.swift in Sources */,
 				19D037B32379E0EC00D0D0B2 /* ManufacturerCell.swift in Sources */,
+				191F399F237AE22200C610CF /* Model.swift in Sources */,
+				191F399A237AE1BA00C610CF /* ModelViewModel.swift in Sources */,
 				19D037B62379E16200D0D0B2 /* ManufacturerViewModel.swift in Sources */,
 				19D037AF2379E0BA00D0D0B2 /* ManufacturerVC.swift in Sources */,
+				191F399C237AE1F000C610CF /* ModelDataModule.swift in Sources */,
+				191F39A4237AE72500C610CF /* UIalert+custom.swift in Sources */,
 				19D037BD2379E20C00D0D0B2 /* APICalling.swift in Sources */,
 				19D037C02379E33400D0D0B2 /* Manufacturer.swift in Sources */,
 			);

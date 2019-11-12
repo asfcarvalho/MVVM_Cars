@@ -12,9 +12,10 @@ class ManufacturerViewModel {
     var page: Int = 0
     var pageCount = 0
     var manufacturList = [Output]()
+    var tempList = [Output]()
     var error: String?
-    
-    let manuvacturerDataModule = ManufacturerDataModule()
+    var output: Output?
+    var isSearching = false
     
     struct Output {
         let code: String
@@ -26,7 +27,7 @@ class ManufacturerViewModel {
     }
     
     func callNewPage(_ row: Int) -> Bool {
-        if row == (self.getNumberOfRows() - 1) && (self.page) < (self.pageCount) {
+        if row == (self.getNumberOfRows() - 1) && (self.page) < (self.pageCount) && !isSearching {
             return true
         }
         return false
@@ -35,6 +36,11 @@ class ManufacturerViewModel {
     init(_ manufacturer: Manufacturer) {
         
         setupViewModel(manufacturer)
+    }
+    
+    func setOutput(_ row: Int) {
+        let temp = manufacturList[row]
+        self.output = Output(code: temp.code, name: temp.name)
     }
     
     func setupViewModel(_ manufacturer: Manufacturer) {
@@ -49,7 +55,21 @@ class ManufacturerViewModel {
         }else {
             self.manufacturList.append(contentsOf: listTemp)
         }
-        
+        self.tempList = self.manufacturList
         self.page = (manufacturer.page ?? 0) + 1
+        
+        self.isSearching = false
+    }
+    
+    func searchValue(_ text: String) {
+        if text.isEmpty {
+            self.manufacturList = tempList
+            self.isSearching = false
+        }else {
+            self.manufacturList = tempList.filter({ (item) -> Bool in
+                return item.name.contains(text)
+            })
+            self.isSearching = true
+        }
     }
 }
