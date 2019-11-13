@@ -42,9 +42,12 @@ class ModelVC: UIViewController {
             
             guard let result = result, error == nil else {
                 
-                self?.stopLoading()
+                DispatchQueue.main.async {
+                    self?.stopLoading()
+                    
+                    UIAlertCustom.shared.showAlert(from: self, message: error, prefferedStyle: UIAlertController.Style.alert)
+                }
                 
-                UIAlertCustom.shared.showAlert(from: self, message: error, prefferedStyle: UIAlertController.Style.alert)
                 return
             }
             
@@ -56,8 +59,9 @@ class ModelVC: UIViewController {
             
             DispatchQueue.main.async {
                 self?.tableView.reloadData()
+                self?.stopLoading()
             }
-            self?.stopLoading()
+            
             
         }
         

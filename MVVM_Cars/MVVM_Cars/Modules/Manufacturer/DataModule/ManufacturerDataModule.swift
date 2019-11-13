@@ -12,7 +12,7 @@ class ManufacturerDataModule {
     
     static let shared = ManufacturerDataModule()
     
-    let pageSize = 10
+    let pageSize = 15
     
     func manufacturerFetch(_ page: Int, callBack: @escaping (Manufacturer?, String?) -> Void) {
         

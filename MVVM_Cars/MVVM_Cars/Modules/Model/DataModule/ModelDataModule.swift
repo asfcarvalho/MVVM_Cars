@@ -12,7 +12,7 @@ class ModelDataModule {
     
     static let shared = ModelDataModule()
     
-    let pageSize = 10
+    let pageSize = 15
     
     func modelFetch(_ id: String, _ page: Int, callBack: @escaping (Model?, String?) -> Void) {
         

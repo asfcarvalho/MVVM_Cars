@@ -16,7 +16,7 @@ class Loading {
     
     func showLoading(_ view: UIView) {
         
-        self.viewLoading?.removeFromSuperview()
+        stopLoading()
         
         viewLoading = UIView(frame: view.bounds)
         viewLoading?.backgroundColor = UIColor.gray.withAlphaComponent(0.9)
@@ -35,8 +35,6 @@ class Loading {
     }
     
     func stopLoading() {
-        DispatchQueue.main.async {
-            self.viewLoading?.removeFromSuperview()
-        }
+        self.viewLoading?.removeFromSuperview()
     }
 }

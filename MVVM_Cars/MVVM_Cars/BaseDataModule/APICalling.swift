@@ -9,7 +9,7 @@
 import Foundation
 
 class APICalling {
-    // create a method for calling api which is return a Observable
+    
     func fetch<T: Codable>(apiRequest: APIRequest, callBack: @escaping (T?, String?) -> Void) {
         
         let request = apiRequest.request(with: apiRequest.baseURL)
@@ -25,9 +25,7 @@ class APICalling {
             
             do {
                 let model = try JSONDecoder().decode(T.self, from: data)
-                DispatchQueue.main.async {
-                    callBack(model, nil)
-                }
+                callBack(model, nil)
                 
             } catch let error {
                 callBack(nil, error.localizedDescription)
